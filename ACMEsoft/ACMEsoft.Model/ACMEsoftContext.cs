@@ -59,5 +59,7 @@ namespace ACMEsoft.Model
 
             return base.SaveChanges();
         }
+
+        public System.Data.Entity.DbSet<ACMEsoft.Model.Person> People { get; set; }
     }
 }

@@ -9,6 +9,8 @@ using System.Web.Routing;
 using Autofac.Integration.Mvc;
 using Autofac;
 using ACMEsoft.Modules;
+using System.Data.Entity;
+using ACMEsoft.Model;
 
 namespace ACMEsoft
 {
@@ -33,7 +35,10 @@ namespace ACMEsoft
 
             var container = builder.Build();
 
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));            
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+            //
+            Database.SetInitializer<ACMEsoftContext>(null);
         }
     }
 }
