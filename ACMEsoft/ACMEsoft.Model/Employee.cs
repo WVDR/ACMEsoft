@@ -12,9 +12,7 @@ namespace ACMEsoft.Model
     {
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int EmployeeID { get; set; }
-
-        public int PersonID { get; set; }
+        public int EmployeeID { get; set; }        
 
         [Required]
         [MaxLength(128)]
@@ -23,7 +21,10 @@ namespace ACMEsoft.Model
         [Required]
         public DateTime EmployeeDate { get; set; }
                 
-        public DateTime TerminatedDate { get; set; }        
+        public DateTime TerminatedDate { get; set; }
+
+        [Required]
+        public int PersonID { get; set; }
 
         [ForeignKey("PersonID")]
         public virtual Person Person { get; set; }
