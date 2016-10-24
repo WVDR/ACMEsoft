@@ -13,13 +13,13 @@ namespace ACMEsoft.Model
     {
 
         public ACMEsoftContext()
-           : base("Name=SampleArchContext")
+           : base("Name=ACMEsoftContext")
         {
             //this.Configuration.LazyLoadingEnabled = false; 
         }
 
-        public IDbSet<Person> Persons { get; set; }
-        public IDbSet<Employee> Countries { get; set; }
+        public IDbSet<Person> People { get; set; }
+        public IDbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -58,10 +58,6 @@ namespace ACMEsoft.Model
             }
 
             return base.SaveChanges();
-        }
-
-        public System.Data.Entity.DbSet<ACMEsoft.Model.Person> People { get; set; }
-
-        public System.Data.Entity.DbSet<ACMEsoft.Model.Employee> Employees { get; set; }
+        }        
     }
 }

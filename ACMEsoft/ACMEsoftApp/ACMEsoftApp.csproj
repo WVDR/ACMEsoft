@@ -51,6 +51,10 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
@@ -159,9 +163,9 @@
       <Project>{fba52e2f-19ab-48db-a2a7-8dab84f672b6}</Project>
       <Name>ACMEsoft.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ACMEsoft\ACMEsoftService.csproj">
+    <ProjectReference Include="..\ACMEsoft\ACMEsoftApi.csproj">
       <Project>{3baefc10-f825-467d-9eb5-cd577c0f9bbc}</Project>
-      <Name>ACMEsoftService</Name>
+      <Name>ACMEsoftApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

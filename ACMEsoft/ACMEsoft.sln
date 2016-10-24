@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoftService", "ACMEsoft\ACMEsoftService.csproj", "{3BAEFC10-F825-467D-9EB5-CD577C0F9BBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoftApi", "ACMEsoft\ACMEsoftApi.csproj", "{3BAEFC10-F825-467D-9EB5-CD577C0F9BBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoft.Tests", "ACMEsoft.Tests\ACMEsoft.Tests.csproj", "{07325DF6-6FBE-4ABF-B60D-2933ADEA3F35}"
 EndProject

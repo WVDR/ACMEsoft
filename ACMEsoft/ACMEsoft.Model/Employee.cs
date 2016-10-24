@@ -24,7 +24,7 @@ namespace ACMEsoft.Model
         public DateTime TerminatedDate { get; set; }
 
         [Required]
-        public int PersonID { get; set; }
+        public long PersonID { get; set; }
 
         [ForeignKey("PersonID")]
         public virtual Person Person { get; set; }

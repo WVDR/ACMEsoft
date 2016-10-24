@@ -8,6 +8,6 @@
         Title="ACME Human Resources" Height="350" Width="525">
     <Grid>
         <Image Source="..\Resources\Acme corp.jpg" Margin="0,0,0,46"></Image>
-        <Button Content="Login" Click="Button_Click" Background="White" Margin="0,273,0,0"/>
+        <Button Content="Logon" Click="Button_Click" Background="Orange" FontSize="25" Margin="134,263,132,10"/>
     </Grid>
 </Window>

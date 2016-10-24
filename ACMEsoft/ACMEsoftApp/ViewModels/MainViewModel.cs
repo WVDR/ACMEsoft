@@ -8,18 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using ACMEsoft.Model;
 using ACMEsoft.Controllers;
+using System.Data;
+using Newtonsoft.Json;
 
 namespace ACMEsoftApp.ViewModels
 {
     class MainViewModel : BaseViewModel
-    {        
+    {
+        HttpClient client;
+        string url;
         PeopleController peopleController = new PeopleController();
         EmployeesController employeesController = new EmployeesController();
 
         public MainViewModel()
-        {            
-            People = peopleController.db.People.ToList();
-            Employees = employeesController.db.Employees.ToList();
+        {
+            //Initialize HTTP Client
+            client = new HttpClient();
+            url = APIAddress + @"/api/EmployeeApi";
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            Employees = GetEmployees().Result;
         }
 
         private List<Person> people;
@@ -56,6 +65,24 @@ namespace ACMEsoftApp.ViewModels
                     NotifyPropertyChanged("Employees");
                 }
             }
+        }
+
+        /// <summary>
+        /// GET: from api
+        /// </summary>
+        /// <returns>List of contacts</returns>
+        async private Task<List<Employee>> GetEmployees()
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
+
+            if (!responseMessage.IsSuccessStatusCode)
+            {
+                //Do not leave the app in an incorrect state, that can not be recovered from.
+                throw new DataException("Could not GET from web api");
+            }
+
+            string responseData = responseMessage.Content.ReadAsStringAsync().Result;
+            return JsonConvert.DeserializeObject<List<Employee>>(responseData);
         }
     }
 }

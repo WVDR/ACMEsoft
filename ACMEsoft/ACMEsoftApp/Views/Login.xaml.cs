@@ -29,7 +29,7 @@ namespace ACMEsoftApp.Views
         {
             MainViewModel viewmodel = new MainViewModel();
             EmployeeDetail employeeDetail = new EmployeeDetail();
-            employeeDetail.DataContext = viewmodel.DataContext;
+            employeeDetail.DataContext = viewmodel;
             employeeDetail.Show();
     }
     }

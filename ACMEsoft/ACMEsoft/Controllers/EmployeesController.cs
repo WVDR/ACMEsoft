@@ -12,7 +12,8 @@ namespace ACMEsoft.Controllers
 {
     public class EmployeesController : Controller
     {
-        public ACMEsoftContext db = new ACMEsoftContext();
+        //Making this public is not good because you can only use this internaly to the api, externally you need to connect to the service.
+        private ACMEsoftContext db = new ACMEsoftContext();
 
         // GET: Employees
         public ActionResult Index()

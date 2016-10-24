@@ -10,8 +10,8 @@ namespace ACMEsoft.Model
 {
     public interface IContext
     {
-        IDbSet<Person> Persons { get; set; }
-        IDbSet<Employee> Countries { get; set; }
+        IDbSet<Person> People { get; set; }
+        IDbSet<Employee> Employees { get; set; }
 
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;
