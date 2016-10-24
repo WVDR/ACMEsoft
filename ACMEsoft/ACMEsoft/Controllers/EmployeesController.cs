@@ -12,7 +12,7 @@ namespace ACMEsoft.Controllers
 {
     public class EmployeesController : Controller
     {
-        private ACMEsoftContext db = new ACMEsoftContext();
+        public ACMEsoftContext db = new ACMEsoftContext();
 
         // GET: Employees
         public ActionResult Index()

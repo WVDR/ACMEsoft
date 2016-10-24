@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoft", "ACMEsoft\ACMEsoft.csproj", "{3BAEFC10-F825-467D-9EB5-CD577C0F9BBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoftService", "ACMEsoft\ACMEsoftService.csproj", "{3BAEFC10-F825-467D-9EB5-CD577C0F9BBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoft.Tests", "ACMEsoft.Tests\ACMEsoft.Tests.csproj", "{07325DF6-6FBE-4ABF-B60D-2933ADEA3F35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoft.Model", "ACMEsoft.Model\ACMEsoft.Model.csproj", "{FBA52E2F-19AB-48DB-A2A7-8DAB84F672B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoft.Service", "ACMEsoft.Service\ACMEsoft.Service.csproj", "{D9308CB6-929E-482A-97EA-BB8BCF9620AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMEsoftApp", "ACMEsoftApp\ACMEsoftApp.csproj", "{D3EC6C76-38AE-4696-890D-9B057001CB31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D9308CB6-929E-482A-97EA-BB8BCF9620AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9308CB6-929E-482A-97EA-BB8BCF9620AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9308CB6-929E-482A-97EA-BB8BCF9620AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EC6C76-38AE-4696-890D-9B057001CB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EC6C76-38AE-4696-890D-9B057001CB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EC6C76-38AE-4696-890D-9B057001CB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EC6C76-38AE-4696-890D-9B057001CB31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
