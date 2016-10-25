@@ -159,10 +159,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\ACMEsoft.Model\ACMEsoft.Model.csproj">
-      <Project>{fba52e2f-19ab-48db-a2a7-8dab84f672b6}</Project>
-      <Name>ACMEsoft.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ACMEsoft\ACMEsoftApi.csproj">
       <Project>{3baefc10-f825-467d-9eb5-cd577c0f9bbc}</Project>
       <Name>ACMEsoftApi</Name>

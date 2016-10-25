@@ -2,17 +2,16 @@
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
-using System.Web.Mvc;
 using ACMEsoft.DataAccessRepository;
-using ACMEsoft.Model;
+using ACMEsoft.Models;
 
 namespace ACMEsoft.Controllers
 {
     public class EmployeeAPIController : ApiController
     {
-        private IDataAccessRepository<Employee, long> _repository;
+        private IDataAccessRepository<Employee, int> _repository;
         //Inject the DataAccessRepository using Construction Injection 
-        public EmployeeAPIController(IDataAccessRepository<Employee, long> r)
+        public EmployeeAPIController(IDataAccessRepository<Employee, int> r)
         {
             _repository = r;
         }
@@ -35,14 +34,14 @@ namespace ACMEsoft.Controllers
         }
 
         [ResponseType(typeof(void))]
-        public IHttpActionResult Put(long id, Employee emp)
+        public IHttpActionResult Put(int id, Employee emp)
         {
             _repository.Put(id, emp);
             return StatusCode(HttpStatusCode.NoContent);
         }
 
         [ResponseType(typeof(void))]
-        public IHttpActionResult Delete(long id)
+        public IHttpActionResult Delete(int id)
         {
             _repository.Delete(id);
             return StatusCode(HttpStatusCode.NoContent);

@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="EmployeeDetail" Height="300" Width="300">
     <Grid>
-        
+        <DataGrid x:Name="PersonDataGrid" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="top" Height="130" ItemsSource="{Binding People}" AutoGenerateColumns="False" SelectionChanged="" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Last Name" Width="SizeToCells" IsReadOnly="True" Binding="{Binding Date_Added, StringFormat=\{0:dd.MM.yy HH:mm:ss\}}"/>
+                <DataGridTextColumn Header="First Name" Width="SizeToCells" IsReadOnly="True" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Date of Birth" Width="SizeToCells" IsReadOnly="True" Binding="{Binding Surname}"/>                
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

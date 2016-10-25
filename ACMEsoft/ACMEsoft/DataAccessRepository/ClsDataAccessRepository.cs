@@ -1,9 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using ACMEsoft.Model;
+using ACMEsoft.Models;
 
 namespace ACMEsoft.DataAccessRepository
 {
@@ -11,7 +9,7 @@ namespace ACMEsoft.DataAccessRepository
     {
         //The dendency for the DbContext specified the current class. 
         [Dependency]
-        public ACMEsoftContext ctx { get; set; }
+        public ACMEsoftEntities ctx { get; set; }
 
         //Get all Employees
         public IEnumerable<Employee> Get()
@@ -36,10 +34,10 @@ namespace ACMEsoft.DataAccessRepository
             var employee = ctx.Employees.Find(id);
             if (employee != null)
             {
-                employee.EmployeeID = entity.EmployeeID;
-                employee.PersonID = entity.PersonID;
+                employee.EmployeeId = entity.EmployeeId;
+                employee.PersonId = entity.PersonId;
                 employee.EmployeeNumber = entity.EmployeeNumber;
-                employee.EmployeeDate = entity.EmployeeDate;
+                employee.EmployedDate = entity.EmployedDate;
                 employee.TerminatedDate = entity.TerminatedDate;                
                 ctx.SaveChanges();
             }

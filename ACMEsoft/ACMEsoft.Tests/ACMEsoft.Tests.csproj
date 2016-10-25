@@ -111,14 +111,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ACMEsoft.Model\ACMEsoft.Model.csproj">
-      <Project>{fba52e2f-19ab-48db-a2a7-8dab84f672b6}</Project>
-      <Name>ACMEsoft.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ACMEsoft.Service\ACMEsoft.Service.csproj">
-      <Project>{d9308cb6-929e-482a-97ea-bb8bcf9620aa}</Project>
-      <Name>ACMEsoft.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ACMEsoft\ACMEsoftApi.csproj">
       <Project>{3BAEFC10-F825-467D-9EB5-CD577C0F9BBC}</Project>
       <Name>ACMEsoftApi</Name>

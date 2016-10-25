@@ -59,12 +59,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ACMEsoft.Model\ACMEsoft.Model.csproj">
-      <Project>{fba52e2f-19ab-48db-a2a7-8dab84f672b6}</Project>
-      <Name>ACMEsoft.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>

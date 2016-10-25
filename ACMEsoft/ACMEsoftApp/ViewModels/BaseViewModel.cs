@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using ACMEsoft.Model;
+using ACMEsoft.Models;
 
 namespace ACMEsoftApp.ViewModels
 {
@@ -27,9 +27,9 @@ namespace ACMEsoftApp.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        private ACMEsoftContext  dataContext;
+        private ACMEsoftEntities dataContext;
 
-        public ACMEsoftContext DataContext
+        public ACMEsoftEntities DataContext
         {
             get
             {

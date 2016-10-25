@@ -2,8 +2,8 @@ using ACMEsoft.DataAccessRepository;
 using Microsoft.Practices.Unity;
 using System.Web.Http;
 using Unity.WebApi;
-using ACMEsoft.Model;
-using ACMEsoft.DataAccessRepository;
+using ACMEsoft.Models;
+
 
 namespace ACMEsoft
 {
